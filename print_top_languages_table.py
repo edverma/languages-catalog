@@ -41,12 +41,6 @@ def print_top_languages_table():
                         formatted_value = family_list[0] if family_list else "Unknown"
                     except json.JSONDecodeError:
                         formatted_value = value if value else "Unknown"
-                elif columns[i] == 'dialects' and value:
-                    try:
-                        dialect_list = json.loads(value)
-                        formatted_value = '\n'.join(dialect_list) if dialect_list else ""
-                    except json.JSONDecodeError:
-                        formatted_value = value if value else ""
                 else:
                     formatted_value = str(value) if value is not None else ""
                 formatted_row.append(formatted_value)
