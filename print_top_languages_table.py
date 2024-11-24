@@ -38,17 +38,17 @@ def print_top_languages_table():
                 elif columns[i] == 'language_family' and value:
                     try:
                         family_list = json.loads(value)
-                        formatted_value = ', '.join(family_list) if family_list else ""
+                        formatted_value = ', '.join(family_list).replace('\n', ' ') if family_list else ""
                     except json.JSONDecodeError:
-                        formatted_value = value if value else "Unknown"
+                        formatted_value = value.replace('\n', ' ') if value else "Unknown"
                 elif columns[i] == 'dialects' and value:
                     try:
                         dialect_list = json.loads(value)
-                        formatted_value = ', '.join(dialect_list) if dialect_list else ""
+                        formatted_value = ', '.join(dialect_list).replace('\n', ' ') if dialect_list else ""
                     except json.JSONDecodeError:
-                        formatted_value = value if value else ""
+                        formatted_value = value.replace('\n', ' ') if value else ""
                 else:
-                    formatted_value = str(value) if value is not None else ""
+                    formatted_value = str(value).replace('\n', ' ') if value is not None else ""
                 formatted_row.append(formatted_value)
                 
             f.write(f"| {rank} | {' | '.join(formatted_row)} |\n")
