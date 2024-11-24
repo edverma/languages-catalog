@@ -13,6 +13,7 @@ def print_top_languages_table():
         SELECT name, native_speakers, language_family, standard_forms, dialects, glottolog, url
         FROM languages 
         WHERE native_speakers IS NOT NULL
+        and language_family IS NOT NULL
         ORDER BY native_speakers DESC
         LIMIT 200
         '''
