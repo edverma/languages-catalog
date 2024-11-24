@@ -1,9 +1,3 @@
-# Languages Catalog
-
-I could not find a good datasource that had a comprehensive list of languages sorted by the number of native speakers, so I wrote this script to scrape this data from Wikipedia pages and insert it into a SQLite database.
-
-I have included the top 200 languages by native speakers as a markdown table in the file `top_languages.md` and have pasted it below. I have also included the SQLite datbase in the repo with data from the most recent run of the script.
-
 | Rank | Name | Native Speakers | Language Family | Standard Forms | Dialects | Glottolog | Url |
 |------|------|------|------|------|------|------|------|
 | 1 | Indo-Aryan | 1,500,000,000 |  |  |  | indo1321 | https://en.wikipedia.org/wiki/Indo-Aryan_languages |
