@@ -7,7 +7,7 @@ def print_top_languages_table():
     c = conn.cursor()
     
     # Open file for writing
-    with open('top_languages.md', 'w', encoding='utf-8') as f:
+    with open('top_languages_full_info.md', 'w', encoding='utf-8') as f:
         # Query for top 200 languages by native speakers, excluding null values
         query = '''
         SELECT name, native_speakers, language_family, standard_forms, dialects, glottolog, url
